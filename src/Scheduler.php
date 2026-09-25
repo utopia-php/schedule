@@ -458,7 +458,7 @@ final class Scheduler
             }
         }
 
-        usort($occurrences, fn(Occurrence $a, Occurrence $b): int => $a->due <=> $b->due ?: $a->id <=> $b->id);
+        usort($occurrences, fn (Occurrence $a, Occurrence $b): int => $a->due <=> $b->due ?: $a->id <=> $b->id);
 
         $this->pendingCoveredUntil = $end;
         $this->pendingSyncedUntil = $this->lastSyncAt;
